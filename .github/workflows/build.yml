@@ -22,7 +22,9 @@ jobs:
           extended: true
 
       - name: Install Dart Sass
-        run: sudo snap install dart-sass
+        run: |
+          curl -fsSL https://github.com/sass/dart-sass/releases/latest/download/dart-sass-linux-x64.tar.gz | tar -xz
+          echo "$PWD/dart-sass" >> $GITHUB_PATH
 
       - name: Build
         run: hugo --minify
