@@ -1,4 +1,4 @@
-## Hugo CMS GitHub Action
+# Hugo CMS GitHub Action
 
 This repository hosts a GitHub Action that is used in my multiple Hugo CMS private repositories.
 
