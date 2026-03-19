@@ -27,6 +27,9 @@ jobs:
           curl -fsSL "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz" | tar -xz
           echo "$PWD/dart-sass" >> $GITHUB_PATH
 
+      - name: Install npm dependencies
+        run: test -f package.json && npm install || true
+
       - name: Build
         run: hugo --minify
 
